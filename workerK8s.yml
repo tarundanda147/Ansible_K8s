@@ -1,0 +1,10 @@
+---
+- hosts: worker_node
+  tasks:
+    - name: package_installation_ubuntu
+      when: ansible_distribution == "Ubuntu"
+      apt:
+        update_cache: yes
+    - name: shell_commands
+      shell: ./worker
+                       
