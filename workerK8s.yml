@@ -1,10 +1,11 @@
 ---
-- hosts: worker_node
+- hosts: worker
+  become: yes
   tasks:
     - name: package_installation_ubuntu
       when: ansible_distribution == "Ubuntu"
       apt:
         update_cache: yes
-    - name: shell_commands
-      shell: ./worker.sh
+    - name: Execute shell script
+      command: /home/ubuntu/AnsibleK8s/worker.sh
                        
