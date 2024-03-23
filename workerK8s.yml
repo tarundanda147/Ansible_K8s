@@ -6,5 +6,5 @@
       apt:
         update_cache: yes
     - name: shell_commands
-      shell: ./worker
+      shell: ./worker.sh
                        
