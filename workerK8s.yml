@@ -6,6 +6,8 @@
       when: ansible_distribution == "Ubuntu"
       apt:
         update_cache: yes
+
     - name: Execute shell script
-      command: /home/ubuntu/AnsibleK8s/worker.sh
+      script: /home/ubuntu/Ansible_K8s/worker.sh
+
                        
